@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--配置关闭缓存-->
+        <setting name="cacheEnabled" value="false"></setting>
+        <!--将下划线转换为驼峰-->
+        <setting name="mapUnderscoreToCamelCase" value="true"></setting>
+        <!--允许 JDBC 支持自动生成主键，需要驱动兼容。 如果设置为 true 则这个设置强制使用自动生成主键，
+        尽管一些驱动不能兼容但仍可正常工作（比如 Derby）-->
+        <setting name="useGeneratedKeys" value="true"></setting>
+        <!--配置执行器-->
+        <setting name="defaultExecutorType" value="REUSE"></setting>
+        <!--事务超时时间-->
+        <setting name="defaultStatementTimeout" value="600"></setting>
+
+    </settings>
+
+    <typeAliases>
+        <typeAlias alias="user" type="com.springboot.webtest.common.model.User"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="mapper/user.xml"/>
+    </mappers>
+</configuration>
