@@ -80,6 +80,11 @@
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
+        <!--整合freemarker-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
